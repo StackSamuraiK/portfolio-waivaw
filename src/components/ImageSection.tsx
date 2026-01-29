@@ -16,7 +16,7 @@ const ImageSection: React.FC = () => {
     visible: { opacity: 1, y: 0 }
   };
 
-  const SubSection = ({ title, count, startSeed, category }: { title: string, count: number, startSeed: number, category: string }) => (
+  const SubSection = ({ title, count, startSeed, category, images }: { title: string, count: number, startSeed: number, category: string, images: string[] }) => (
     <div className="space-y-6" id="work">
       <div className="flex items-center gap-4">
         <h3 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tighter">{title}</h3>
@@ -31,7 +31,7 @@ const ImageSection: React.FC = () => {
             className="group relative overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-800 aspect-[3/4]"
           >
             <img 
-              src={`https://picsum.photos/seed/${startSeed + i}/800/1067`} 
+              src={images[i] || `https://picsum.photos/seed/${startSeed + i}/800/1067`} 
               alt={`${title} shot ${i}`}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-90 group-hover:brightness-110"
             />
@@ -52,9 +52,9 @@ const ImageSection: React.FC = () => {
       variants={containerVariants}
       className="space-y-32"
     >
-      <SubSection title="Physique & Stage" count={3} startSeed={550} category="Natural Bodybuilding" />
-      <SubSection title="Editorial Works" count={4} startSeed={660} category="Fitness Modeling" />
-      <SubSection title="Training & Grits" count={4} startSeed={770} category="Raw Discipline" />
+      <SubSection title="Collaborations and Commercial Photoshoots" count={3} startSeed={550} category="Natural Bodybuilding" images={['/s-1-1.png', '/s-1-2.png', '/s-1-3.png']} />
+      <SubSection title="Sponsorships and Brand Endorsements" count={4} startSeed={660} category="Fitness Modeling" images={['/s-2-1.png', '/s-2-2.png', '/s-2-3.png', '/s-2-4.png']} />
+      <SubSection title="Fitness and Lifestyle" count={4} startSeed={770} category="Raw Discipline" images={['/s-3-1.png', '/s-3-2.png', '/s-3-3.png', '/s-3-4.png']} />
     </motion.section>
   );
 };

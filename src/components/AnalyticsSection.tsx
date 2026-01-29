@@ -5,23 +5,42 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 
 import { Eye, Users, Flame, Share2, ChevronLeft, ChevronRight, Zap } from 'lucide-react';
 
 const mockData = [
-  { name: 'Mon', views: 45000 },
-  { name: 'Tue', views: 52000 },
-  { name: 'Wed', views: 48000 },
-  { name: 'Thu', views: 61000 },
-  { name: 'Fri', views: 89000 },
-  { name: 'Sat', views: 125000 },
-  { name: 'Sun', views: 110000 },
+  { name: 'September', views: 4400 },
+  { name: 'October', views: 7700 },
+  { name: 'November', views: 23000 },
+  { name: 'December', views: 65000 },
+  { name: 'January', views: 80000 },
 ];
 
 const stats = [
-  { label: 'Athletes Reached', value: '1.2M', icon: <Users size={20} className="text-blue-500" /> },
-  { label: 'Total Impressions', value: '4.8M', icon: <Eye size={20} className="text-purple-500" /> },
+  { label: 'Total Impressions', value: '46K+', icon: <Users size={20} className="text-blue-500" /> },
+  { label: 'Total Views', value: '117K+', icon: <Eye size={20} className="text-purple-500" /> },
   { label: 'Daily Activity', value: 'High', icon: <Flame size={20} className="text-orange-500" /> },
-  { label: 'Transformation Wins', value: '500+', icon: <Zap size={20} className="text-yellow-500" /> },
+  { label: 'Followers increased', value: '900+', icon: <Zap size={20} className="text-yellow-500" /> },
 ];
 
-const carouselImages = Array.from({ length: 7 }).map((_, i) => `https://picsum.photos/seed/fitness-model-${i}/600/600`);
+const carouselImages = [
+  { src: '/c1.png', views: '29K+ Views' },
+  { src: '/c2.png', views: '18K+ Views' },
+  { src: '/c3.png', views: '34K+ Views' },
+  { src: '/c4.png', views: '11K+ Views' },
+  { src: '/c5.png', views: '14K+ Views' },
+  { src: '/c6.png', views: '11K+ Views' },
+  { src: '/c7.png', views: '9K+ Views' },
+];
+
+const CustomTooltip = ({ active, payload }: any) => {
+  if (active && payload && payload.length) {
+    return (
+      <div style={{ backgroundColor: '#0f172a', padding: '8px 12px', borderRadius: '8px', border: 'none' }}>
+        <p style={{ color: '#ffffff', margin: 0, fontSize: '12px', fontWeight: 'bold' }}>
+          {payload[0].value.toLocaleString()} views
+        </p>
+      </div>
+    );
+  }
+  return null;
+};
 
 const AnalyticsSection: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -68,9 +87,9 @@ const AnalyticsSection: React.FC = () => {
           <div className="flex justify-between items-center mb-10">
             <div>
               <h3 className="font-black text-xl uppercase tracking-tight">Viral Performance</h3>
-              <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">Weekly Content Impressions</p>
+              <p className="text-xs text-slate-400 font-bold uppercase tracking-widest">Monthly Content Impressions</p>
             </div>
-            <span className="text-xs bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 px-3 py-1 rounded-full font-bold">+28% Growth</span>
+            <span className="text-xs bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 px-3 py-1 rounded-full font-bold">+1300+% Growth</span>
           </div>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">
@@ -78,11 +97,11 @@ const AnalyticsSection: React.FC = () => {
                 <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fontSize: 10, fontWeight: 700, fill: '#64748b' }} />
                 <Tooltip 
                   cursor={{ fill: 'transparent' }}
-                  contentStyle={{ borderRadius: '16px', border: 'none', boxShadow: '0 20px 25px -5px rgba(0,0,0,0.1)', backgroundColor: '#0f172a', color: '#fff' }}
+                  content={<CustomTooltip />}
                 />
                 <Bar dataKey="views" radius={[4, 4, 4, 4]} barSize={40}>
                    {mockData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={index === 5 ? '#3b82f6' : '#94a3b830'} />
+                    <Cell key={`cell-${index}`} fill={index === 4 ? '#3b82f6' : '#94a3b830'} />
                   ))}
                 </Bar>
               </BarChart>
@@ -109,13 +128,12 @@ const AnalyticsSection: React.FC = () => {
           className="flex gap-6 overflow-x-auto pb-10 scrollbar-hide snap-x snap-mandatory"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          {carouselImages.map((src, i) => (
+          {carouselImages.map((item, i) => (
             <div key={i} className="flex-shrink-0 w-72 aspect-square rounded-2xl overflow-hidden snap-center relative group/item shadow-lg">
-              <img src={src} alt="Fitness Reel" className="w-full h-full object-cover grayscale-[0.5] group-hover/item:grayscale-0 transition-all duration-500" />
+              <img src={item.src} alt="Fitness Reel" className="w-full h-full object-cover grayscale-[0.5] group-hover/item:grayscale-0 transition-all duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end p-8">
                 <div className="text-white">
-                  <p className="text-lg font-black italic uppercase">500K+ Views</p>
-                  <p className="text-[10px] font-bold uppercase tracking-widest opacity-70">Trending Workout</p>
+                  <p className="text-lg font-black italic uppercase">{item.views}</p>
                 </div>
               </div>
             </div>

@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
       >
         <div className="absolute inset-0 rounded-full bg-linear-to-tr from-blue-600 via-slate-400 to-blue-400 animate-pulse blur-2xl opacity-30"></div>
         <img 
-          src="https://images.unsplash.com/photo-1583454110551-21f2fa2ec617?q=80&w=800&auto=format&fit=crop" 
+          src="hero-image.png" 
           alt="Athlete Profile" 
           className="w-full h-full object-cover rounded-full border-8 border-white dark:border-slate-800 shadow-2xl relative z-10 grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
         />

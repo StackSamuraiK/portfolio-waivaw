@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
         <div className="space-y-4 text-center md:text-left">
           <div className="text-2xl font-black tracking-tighter uppercase italic">
-            ARUNAVA<span className="text-blue-500">.FIT</span>
+            WAIVAW<span className="text-blue-500">.SRIVASTAV</span>
           </div>
           <p className="text-slate-500 dark:text-slate-400 max-w-xs font-medium">
             Redefining the standards of natural aesthetics through relentless discipline.
@@ -17,13 +17,12 @@ const Footer: React.FC = () => {
         <div className="flex flex-wrap justify-center gap-12 text-[10px] font-bold uppercase tracking-[0.2em]">
           <div className="space-y-4 flex flex-col items-center md:items-start">
             <span className="text-slate-400 dark:text-slate-600">The Athlete</span>
-            <a href="#" className="hover:text-blue-500 transition-colors">Instagram</a>
-            <a href="#" className="hover:text-blue-500 transition-colors">YouTube</a>
-            <a href="#" className="hover:text-blue-500 transition-colors">Training App</a>
+            <a href="https://www.instagram.com/vai05" target='_blank' className="hover:text-blue-500 transition-colors">Instagram</a>
+            <a href="https://x.com/CallMeVaii" target='_blank' className="hover:text-blue-500 transition-colors">X (FKA Twitter)</a>  
           </div>
           <div className="space-y-4 flex flex-col items-center md:items-start">
             <span className="text-slate-400 dark:text-slate-600">Represent</span>
-            <a href="#" className="hover:text-blue-500 transition-colors">Model Agency</a>
+            <a href="#" className="hover:text-blue-500 transition-colors">Brands</a>
             <a href="#" className="hover:text-blue-500 transition-colors">Sponsorships</a>
           </div>
           <div className="space-y-4 flex flex-col items-center md:items-start">
@@ -36,7 +35,7 @@ const Footer: React.FC = () => {
       </div>
       
       <div className="max-w-6xl mx-auto mt-20 pt-8 border-t border-slate-100 dark:border-slate-900 text-center text-[10px] text-slate-400 uppercase tracking-[0.4em] font-bold">
-        &copy; {new Date().getFullYear()} ARUNAVA ATHLETICS. Natural • Aesthetic • Disciplined.
+        &copy; {new Date().getFullYear()} Waivaw Srivastav. Natural • Aesthetic • Disciplined.
       </div>
     </footer>
   );
