@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
         className="flex-1 space-y-6"
       >
         <div className="space-y-2">
-          <h2 className="text-blue-500 font-bold tracking-[0.3em] text-xs uppercase">Professional Natural Bodybuilder • Fitness Model</h2>
+          <h2 className="text-blue-500 font-bold tracking-[0.3em] text-xs uppercase">Natural Athlete (Bodybuilding) • Fitness Model</h2>
           <h1 className="text-5xl md:text-8xl font-black tracking-tighter uppercase leading-[0.9]">
             WAIVAW <br />
             <span className="text-slate-300 dark:text-slate-700 italic">SRIVASTAV.</span>

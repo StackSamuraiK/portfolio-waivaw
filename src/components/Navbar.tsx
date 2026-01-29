@@ -1,13 +1,13 @@
 
 import React, { useState } from 'react';
-import { Instagram, Twitter, Menu, X } from 'lucide-react';
+import { Instagram, Twitter, Menu, X, Moon, Sun } from 'lucide-react';
 
 interface NavbarProps {
   isDark: boolean;
   toggleDarkMode: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = () => {
+const Navbar: React.FC<NavbarProps> = ({ isDark, toggleDarkMode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -44,6 +44,19 @@ const Navbar: React.FC<NavbarProps> = () => {
             <Twitter size={18} className="cursor-pointer hover:text-blue-400 transition-colors" />
             </a>
           </div>
+
+          {/* Dark Mode Toggle */}
+          <button
+            onClick={toggleDarkMode}
+            className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            aria-label="Toggle dark mode"
+          >
+            {isDark ? (
+              <Sun size={20} className="text-yellow-400" />
+            ) : (
+              <Moon size={20} className="text-slate-600" />
+            )}
+          </button>
 
           {/* Mobile Menu Button */}
           <button 
