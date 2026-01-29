@@ -1,8 +1,8 @@
 
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { Eye, Users, Flame, Share2, ChevronLeft, ChevronRight, Zap } from 'lucide-react';
+import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { Eye, Users, Flame, ChevronLeft, ChevronRight, Zap } from 'lucide-react';
 
 const mockData = [
   { name: 'September', views: 4400 },
@@ -100,7 +100,7 @@ const AnalyticsSection: React.FC = () => {
                   content={<CustomTooltip />}
                 />
                 <Bar dataKey="views" radius={[4, 4, 4, 4]} barSize={40}>
-                   {mockData.map((entry, index) => (
+                   {mockData.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={index === 4 ? '#3b82f6' : '#94a3b830'} />
                   ))}
                 </Bar>
@@ -129,9 +129,9 @@ const AnalyticsSection: React.FC = () => {
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {carouselImages.map((item, i) => (
-            <div key={i} className="flex-shrink-0 w-72 aspect-square rounded-2xl overflow-hidden snap-center relative group/item shadow-lg">
+            <div key={i} className="shrink-0 w-72 aspect-square rounded-2xl overflow-hidden snap-center relative group/item shadow-lg">
               <img src={item.src} alt="Fitness Reel" className="w-full h-full object-cover grayscale-[0.5] group-hover/item:grayscale-0 transition-all duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end p-8">
+              <div className="absolute inset-0 bg-linear-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end p-8">
                 <div className="text-white">
                   <p className="text-lg font-black italic uppercase">{item.views}</p>
                 </div>
