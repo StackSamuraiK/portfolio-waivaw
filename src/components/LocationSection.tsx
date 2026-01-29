@@ -46,7 +46,7 @@ const LocationSection: React.FC = () => {
             </div>
             <div className="min-w-0">
               <div className="font-bold uppercase text-xs tracking-widest">Connect</div>
-              <div className="text-sm text-slate-500 dark:text-slate-400 break-words overflow-hidden">waivawsrivastav@gmail.com</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400 wrap-break-words overflow-hidden">waivawsrivastav@gmail.com</div>
             </div>
           </div>
         </div>
