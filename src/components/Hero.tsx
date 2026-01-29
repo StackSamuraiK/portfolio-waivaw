@@ -15,6 +15,7 @@ const Hero: React.FC = () => {
         <img 
           src="hero-image.png" 
           alt="Athlete Profile" 
+          loading="lazy"
           className="w-full h-full object-cover rounded-full border-8 border-white dark:border-slate-800 shadow-2xl relative z-10 grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
         />
       </motion.div>

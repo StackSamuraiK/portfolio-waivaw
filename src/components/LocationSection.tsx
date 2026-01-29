@@ -11,7 +11,8 @@ const LocationSection: React.FC = () => {
           {/* Image of India Map */}
           <img 
             src="/map.png" 
-            alt="Map of India" 
+            alt="Map of India"
+            loading="lazy" 
             className="w-full h-auto object-contain"
           />
           

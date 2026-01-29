@@ -130,7 +130,7 @@ const AnalyticsSection: React.FC = () => {
         >
           {carouselImages.map((item, i) => (
             <div key={i} className="shrink-0 w-72 aspect-square rounded-2xl overflow-hidden snap-center relative group/item shadow-lg">
-              <img src={item.src} alt="Fitness Reel" className="w-full h-full object-cover grayscale-[0.5] group-hover/item:grayscale-0 transition-all duration-500" />
+              <img src={item.src} alt="Fitness Reel" loading="lazy" className="w-full h-full object-cover grayscale-[0.5] group-hover/item:grayscale-0 transition-all duration-500" />
               <div className="absolute inset-0 bg-linear-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity flex items-end p-8">
                 <div className="text-white">
                   <p className="text-lg font-black italic uppercase">{item.views}</p>
