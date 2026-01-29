@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Instagram, Linkedin, Twitter, Menu, X } from 'lucide-react';
+import { Instagram, Twitter, Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   isDark: boolean;
@@ -43,9 +43,6 @@ const Navbar: React.FC<NavbarProps> = () => {
             <a href="https://x.com/CallMeVaii" target='_blank'>
             <Twitter size={18} className="cursor-pointer hover:text-blue-400 transition-colors" />
             </a>
-            <a href="https://www.linkedin.com/in/waivaw-srivastav-07992911a/" target='_blank'>
-            <Linkedin size={18} className="cursor-pointer hover:text-blue-700 transition-colors" />
-            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -75,12 +72,6 @@ const Navbar: React.FC<NavbarProps> = () => {
             <div className="border-t border-slate-200 dark:border-slate-800 pt-4 flex space-x-3">
               <a href="https://www.instagram.com/vai05" target='_blank'>
                 <Instagram size={18} className="cursor-pointer hover:text-pink-500 transition-colors" />
-              </a>
-              <a href="https://x.com/CallMeVaii" target='_blank'>
-                <Twitter size={18} className="cursor-pointer hover:text-blue-400 transition-colors" />
-              </a>
-              <a href="https://www.linkedin.com/in/waivaw-srivastav-07992911a/" target='_blank'>
-                <Linkedin size={18} className="cursor-pointer hover:text-blue-700 transition-colors" />
               </a>
             </div>
           </div>

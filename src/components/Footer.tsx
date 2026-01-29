@@ -18,7 +18,6 @@ const Footer: React.FC = () => {
           <div className="space-y-4 flex flex-col items-center md:items-start">
             <span className="text-slate-400 dark:text-slate-600">The Athlete</span>
             <a href="https://www.instagram.com/vai05" target='_blank' className="hover:text-blue-500 transition-colors">Instagram</a>
-            <a href="https://x.com/CallMeVaii" target='_blank' className="hover:text-blue-500 transition-colors">X (FKA Twitter)</a>  
           </div>
           <div className="space-y-4 flex flex-col items-center md:items-start">
             <span className="text-slate-400 dark:text-slate-600">Represent</span>
