@@ -9,9 +9,9 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
-        className="w-64 h-64 md:w-96 md:h-96 relative flex-shrink-0"
+        className="w-64 h-64 md:w-96 md:h-96 relative shrink-0"
       >
-        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-600 via-slate-400 to-blue-400 animate-pulse blur-2xl opacity-30"></div>
+        <div className="absolute inset-0 rounded-full bg-linear-to-tr from-blue-600 via-slate-400 to-blue-400 animate-pulse blur-2xl opacity-30"></div>
         <img 
           src="https://images.unsplash.com/photo-1583454110551-21f2fa2ec617?q=80&w=800&auto=format&fit=crop" 
           alt="Athlete Profile" 
