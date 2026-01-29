@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Instagram, Twitter, Menu, X, Moon, Sun } from 'lucide-react';
+import { Instagram, Menu, X, Moon, Sun } from 'lucide-react';
 
 interface NavbarProps {
   isDark: boolean;
@@ -39,9 +39,6 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleDarkMode }) => {
           <div className="hidden sm:flex space-x-3">
             <a href="https://www.instagram.com/vai05" target='_blank'>
             <Instagram size={18} className="cursor-pointer hover:text-pink-500 transition-colors" />
-            </a>
-            <a href="https://x.com/CallMeVaii" target='_blank'>
-            <Twitter size={18} className="cursor-pointer hover:text-blue-400 transition-colors" />
             </a>
           </div>
 
